@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+ 
+        canvas{
+            background:#f6f6f6;
+        }
+ 
+    </style>
+</head>
+<body>
+<h3>canvas画布：不断旋转的心</h3>
+ 
+<canvas id="HuaBu">
+    您的浏览器不支持canvas画布
+</canvas>
+ 
+<canvas id="HuaBu2">
+    您的浏览器不支持canvas画布
+</canvas>
+ 
+ 
+ 
+<div>
+    <p>ctx.translate(x,y) ： 坐标轴原点平移到指定点，所有点的坐标都发生改变；</p>
+    <p>ctx.rotate(deg) ： 画笔旋转，则内容旋转，轴点在坐标轴原点</p>
+    <p>ctx.scale() ： 画笔缩放</p>
+</div>
+ 
+ 
+ 
+ 
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+ 
+    var w=200;
+    var h=200;
+ 
+    HuaBu.width=w;     //画布的宽
+    HuaBu.height=h;    //画布的宽
+ 
+    //创建画布
+    var ctx=HuaBu.getContext("2d");
+ 
+    var xin=new Image();
+    xin.src="imgs/xin.png";
+ 
+    xin.onload=function () {
+ 
+        var Width=xin.width/4;
+        var Height=xin.height/4;
+ 
+        //平移旋转坐标轴到画布中间
+        ctx.translate(w/2,h/2);
+ 
+        setInterval(function () {
+ 
+           // ctx.clearRect(-w/2,-h/2,w,h);
+ 
+            ctx.rotate(5*Math.PI/180);
+            ctx.drawImage(xin,0-Width/2,0-Height/2,Width,Height);    //修改图像旋转中心
+ 
+ 
+        },50);
+ 
+ 
+    }
+ 
+ 
+//-------------------------------------------------------------
+ 
+ 
+    HuaBu2.width=w;     //画布的宽
+    HuaBu2.height=h;    //画布的宽
+ 
+    //创建画布
+    var ctx2=HuaBu2.getContext("2d");
+ 
+    var xin2=new Image();
+    xin2.src="imgs/xin.png";
+ 
+    xin2.onload=function () {
+ 
+        var Width=xin2.width/4;
+        var Height=xin2.height/4;
+ 
+        //平移旋转坐标轴到画布中间
+        ctx2.translate(w/2,h/2);
+ 
+        setInterval(function () {
+ 
+            ctx2.clearRect(-w/2,-h/2,w,h);
+ 
+            ctx2.rotate(5*Math.PI/180);
+            ctx2.drawImage(xin2,0-Width/2,0-Height/2,Width,Height);    //修改图像旋转中心
+ 
+ 
+        },50);
+ 
+ 
+    }
+ 
+</script>
+ 
+ 
+</body>
+</html>

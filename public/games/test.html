@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>测试共享屏幕</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .main {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #001c04;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #myCanvas {}
+
+    .reduce {
+      animation: reduce var(--reduceTime) ease-out forwards;
+    }
+
+    @keyframes reduce {
+      to {
+        transform: scale(.4);
+        -webkit-transform: scale(.4);
+      }
+    }
+
+    .shadow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      width: var(--ballR);
+      height: var(--ballR);
+      border: none;
+      border-radius: 50%;
+      background-color: #f0e34c;
+      box-shadow: inset 0 0 var(--ballR) var(--ballR) #f0e34c, 0 0 20px 30px #f0e34c;
+      animation: shadow 1.2s ease-in forwards;
+    }
+    @keyframes shadow {
+      to {
+        box-shadow: inset 0 0 var(--ballR) var(--ballR) #f0e34c, 0 0 40px 80px #f0e34c, 0 0 80px 100px #fff;
+      }
+    }
+    .light{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      width: 100%;
+      height: var(--ballR / 10);
+      border-radius: 0 0 400px 400px;
+      animation: light 2s  forwards;
+      animation-delay: 1s;
+      background: #fff;
+      filter: brightness(1.5);
+      box-shadow: 0 0 40px 50px #fff;
+      /* filter: drop-shadow(0 0 40px #fff); */
+      opacity: 0;
+      transform-origin: center bottom;
+      animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes light {
+      0%{
+        opacity: 1;
+      }
+      to{
+        height: 60vh;
+        opacity: 1;
+      }
+    }
+
+    #dragon{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      width: 100vw;
+      height: auto;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <canvas id="myCanvas">
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <div class="shadow">
+      
+    </div>
+    <div class="light"></div>
+  </div>
+  <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/426a158b989147cdb352ac964cf78c03~tplv-k3u1fbpfcp-watermark.image" id="dragon" alt="">
+
+  <script>
+    const body = document.getElementsByTagName('body')[0]
+    const canvas = document.querySelector('#myCanvas')
+    const ctx = canvas.getContext("2d");
+
+    var ww = window.innerWidth
+      , wh = window.innerHeight
+
+    canvas.width = ww
+    canvas.height = wh
+
+    ctx.translate(ww / 2, wh / 2);
+    ctx.save()
+
+    var isLight = true
+      , isRotate = false //是否开始旋转
+    const starR = 7
+    const starDR = 15
+    const ballR = 30
+    const R = ballR * 4
+    body.style.setProperty('--ballR', R + 'px')
+    //数组数字排序
+    const list = [1, 2, 4, 7, 3, 6, 5]
+
+
+    // 画七个龙珠
+    function dramDragonBall() {
+      drawBall(0, 0, 5)
+      drawSomeFiveStar(5)
+      let deg = -180
+      for (let i = 0; i < 6; i++) {
+        const item = list[i]
+        let x = Math.cos(Math.PI * 2 / 360 * deg) * R
+        let y = Math.sin(Math.PI * 2 / 360 * deg) * R
+        deg += 60
+        drawBall(x, y, item)
+        drawSomeFiveStar(item)
+      }
+    }
+
+
+    //画龙珠
+    function drawBall(x, y, num) {
+      ctx.restore()
+      ctx.save()
+      ctx.translate(x, y)
+      ctx.beginPath();
+      ctx.fillStyle = "#ffa20c";
+      ctx.arc(0, 0, ballR, 0, 2 * Math.PI);
+      if (isLight) {
+        ctx.shadowBlur = 30;
+        ctx.shadowColor = "yellow";
+      }
+      ctx.fill();
+
+      // ctx.stroke();
+    }
+
+
+    //画多个星星
+    function drawSomeFiveStar(num) {
+      let hasCenter = [1, 5, 6, 7].includes(num)
+      hasCenter && drawFiveStar()
+      let newNum = hasCenter ? num - 1 : num
+
+      let deg = -180
+      // ctx.save()
+      // ctx.restore()
+      if (newNum < 1) return
+      ctx.save()
+      for (let i = 0; i < newNum; i++) {
+        ctx.restore()
+        ctx.save()
+        let x = Math.cos(Math.PI * 2 / 360 * deg) * starDR
+        let y = Math.sin(Math.PI * 2 / 360 * deg) * starDR
+        deg += 360 / (newNum)
+        ctx.translate(x, y)
+        drawFiveStar()
+      }
+      ctx.restore()
+    }
+
+    //画五角星
+    function drawFiveStar() {
+      ctx.beginPath();
+      for (var i = 0; i < 5; i++) {
+        ctx.lineTo(Math.cos((18 + i * 72) / 180 * Math.PI) * starR, -Math.sin((18 + i * 72) / 180 * Math.PI) * starR);
+        ctx.lineTo(Math.cos((54 + i * 72) / 180 * Math.PI) * (starR / 2), -Math.sin((54 + i * 72) / 180 * Math.PI) * (starR / 2));
+      }  //30旋转弧度
+
+      ctx.closePath();
+      ctx.fillStyle = "#ff0827";
+      ctx.fill();
+      // ctx.stroke();
+    }
+
+    //开始旋转
+    setTimeout(() => {
+      isRotate = true
+    }, 1500);
+
+    //实现闪光
+    setInterval(() => {
+      isLight = !isLight
+    }, 400);
+
+    setTimeout(() => {
+      cancelAnimationFrame(timer)
+    }, 8000);
+
+    var timer
+      , speed = 100
+    //龙珠旋转  开始动画
+    function init() {
+      ctx.clearRect(-ww, -wh, 2 * ww, 2 * wh);
+      if (isRotate) {
+        ctx.restore()
+        ctx.rotate(Math.PI / speed);
+        speed -= .5
+        if (speed == 15) {
+          //设置龙珠缩小交替到之后动画的时间
+          const reducetime = 1400
+          setTimeout(() => {
+            canvas.classList.add('reduce')
+          }, reducetime - 500)
+          setTimeout(() => {
+            const odiv = document.createElement('div')
+            const odiv2 = document.createElement('div')
+            odiv.className = 'shadow'
+            odiv2.className = 'light'
+            odiv2.addEventListener('animationend',onanimationend)
+            document.querySelector('.main').appendChild(odiv)
+            document.querySelector('.main').appendChild(odiv2)
+          }, reducetime);
+          body.style.setProperty('--reduceTime', reducetime / 1000 + 's')
+        }
+        if (speed < 1) cancelAnimationFrame(timer)
+      }
+      dramDragonBall()
+      timer = requestAnimationFrame(init)
+    }
+
+    //监听动画结束  显示神龙
+    const onanimationend = () => {
+      document.getElementById('dragon').style.display = 'block'
+    }
+
+    //开始
+    // init()
+
+  </script>
+</body>
+
+</html>
