@@ -5,7 +5,7 @@ import topLevelAwait from 'vite-plugin-top-level-await'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/web-tool/',
   plugins: [
     vue(),
     topLevelAwait({
