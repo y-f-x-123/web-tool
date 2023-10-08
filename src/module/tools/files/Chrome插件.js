@@ -51,6 +51,16 @@ export default {
       icon: '52.png',
       name: '密码管理',
       link: 'https://extfans.com/productivity/hdokiejnpimakedhajhdlcegeplioahd/'
+    },
+    {
+      icon: 'https://chrome.pictureknow.com/favicon.ico',
+      name: '收藏猫插件集合',
+      link: 'https://chrome.pictureknow.com/'
+    },
+    {
+      icon: 'https://crxdl.com/image/favicon.ico',
+      name: 'CrxDL插件集合',
+      link: 'https://crxdl.com/'
     }
   ]
 }
