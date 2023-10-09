@@ -5,43 +5,46 @@ import {
 } from 'vue-router'
 import Layout from '@/components/Layout/index.vue'
 
+//在githubpage中 router使用history模式，故打包后放置子路径时，路由base和router要统一
+import config from '../config/index'
+
 export const constantRoutes = [
   {
-    path: '/',
+    path: `${config.basePath}`,
     component: Layout,
-    redirect: '/web/tools',
+    redirect: `${config.basePath}/tools`,
     hidden: true,
     children: [
       {
-        path: '/web/home',
+        path: `${config.basePath}/home`,
         component: () => import('@/views/home/index.vue')
       },
       {
-        path: '/web/games',
+        path: `${config.basePath}/games`,
         component: () => import('@/views/games/index.vue')
       },
       {
-        path: '/web/tools',
+        path: `${config.basePath}/tools`,
         component: () => import('@/views/tools/index.vue')
       },
       {
-        path: '/web/notes',
+        path: `${config.basePath}/notes`,
         component: () => import('@/views/notes/index.vue')
       },
       {
-        path: '/web/relax',
+        path: `${config.basePath}/relax`,
         component: () => import('@/views/relax/index.vue')
       }
     ]
   },
   {
-    path: '/web/links',
+    path: `${config.basePath}/links`,
     name: 'linkes',
     component: () => import('@/views/links/index.vue')
   },
   {
     path: '/:pathMatch(.*)*',
-    redirect: '/web/tools',
+    redirect: '/tools',
     hidden: true
   }
 ]
