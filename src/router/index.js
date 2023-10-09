@@ -10,35 +10,35 @@ import config from '../config/index'
 
 export const constantRoutes = [
   {
-    path: `${config.basePath}`,
+    path: `/`,
     component: Layout,
-    redirect: `${config.basePath}/tools`,
+    redirect: `/tools`,
     hidden: true,
     children: [
       {
-        path: `${config.basePath}/home`,
+        path: `/home`,
         component: () => import('@/views/home/index.vue')
       },
       {
-        path: `${config.basePath}/games`,
+        path: `/games`,
         component: () => import('@/views/games/index.vue')
       },
       {
-        path: `${config.basePath}/tools`,
+        path: `/tools`,
         component: () => import('@/views/tools/index.vue')
       },
       {
-        path: `${config.basePath}/notes`,
+        path: `/notes`,
         component: () => import('@/views/notes/index.vue')
       },
       {
-        path: `${config.basePath}/relax`,
+        path: `/relax`,
         component: () => import('@/views/relax/index.vue')
       }
     ]
   },
   {
-    path: `${config.basePath}/links`,
+    path: `/links`,
     name: 'linkes',
     component: () => import('@/views/links/index.vue')
   },
@@ -51,7 +51,7 @@ export const constantRoutes = [
 
 const createRoute = () =>
   createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: constantRoutes
     // scrollBehavior(to, from, savedPosition) {
     //   if (savedPosition) {

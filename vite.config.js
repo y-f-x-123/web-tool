@@ -8,7 +8,7 @@ import config from './src/config/index'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: config.basePath,
+  // base: config.basePath,
   plugins: [
     vue(),
     topLevelAwait({
@@ -35,9 +35,9 @@ export default defineConfig({
     },
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
-  build: {
-    assetsPublicPath: './assets' //此处为修改的地方，这里加.
-  },
+  // build: {
+  //   assetsPublicPath: './assets' //此处为修改的地方，这里加.
+  // },
   server: {
     host: 'localhost', // 指定服务器主机名
     port: 4090, // 指定服务器端口
