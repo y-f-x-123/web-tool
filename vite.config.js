@@ -8,7 +8,7 @@ import config from './src/config/index'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: config.basePath,
+  base: '/webtool',
   plugins: [
     vue(),
     topLevelAwait({
