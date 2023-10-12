@@ -114,12 +114,12 @@ if (localStorage.getItem('ABIN_SITE_DATA')) {
 }
 
 // 动画
-// .contentbox-enter-active {
-//   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-// }
+.contentbox-enter-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
 
-// .contentbox-enter-from {
-//   transform: scale(0.5);
-//   opacity: 0;
-// }
+.contentbox-enter-from {
+  transform: scale(0.5);
+  opacity: 0;
+}
 </style>
