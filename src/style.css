@@ -1,15 +1,25 @@
-*{
+* {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  width: 8px;
+  background: #555;
+  border-radius: 8px;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
 }
-#app{
+#app {
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -26,17 +36,8 @@ body {
   }
 }
 
-.flex{
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-#app::-webkit-scrollbar {
-  width: 5px;
-  background-color: #ff5a00;
-}
-#app::-webkit-scrollbar-thumb{
-  width: 5px;
-  background: skyblue;
 }

@@ -3,9 +3,6 @@ import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import topLevelAwait from 'vite-plugin-top-level-await'
 
-//在githubpage中 router使用history模式，故打包后放置子路径时，路由base和router要统一
-import config from './src/config/index'
-
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/webtool',

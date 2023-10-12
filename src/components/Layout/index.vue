@@ -8,27 +8,12 @@
   <main class="content">
     <router-view v-slot="{ Component, route }">
       <keep-alive>
-        <component :is="Component" :key="route.name" />
+        <Transition name="contentbox">
+          <component :is="Component" :key="route.name" />
+        </Transition>
       </keep-alive>
     </router-view>
   </main>
-
-  <footer>
-    <div class="site-links"></div>
-
-    <div class="site-data">
-      <span id="busuanzi_container_site_pv"
-        >浏览量<span id="busuanzi_value_site_pv" style="color: #1e80ff">{{
-          siteData.site_pv
-        }}</span></span
-      >&nbsp;|&nbsp;
-      <span id="busuanzi_container_site_uv"
-        >访客数<span id="busuanzi_value_site_uv" style="color: #1e80ff">{{
-          siteData.site_uv
-        }}</span></span
-      >
-    </div>
-  </footer>
 </template>
 
 <script setup>
@@ -92,36 +77,14 @@ if (localStorage.getItem('ABIN_SITE_DATA')) {
 }
 
 .content {
-  width: 100%;
-  height: fit-content;
-  padding-top: calc($--header-height + 20px);
-  padding-bottom: 40px;
+  margin-top: calc($--header-height);
+  padding-top: 20px;
   padding-left: $--padding-side;
   padding-right: $--padding-side;
-  background: $--color-body;
-}
-
-footer {
-  position: sticky;
-  bottom: 0;
   width: 100%;
-  padding: 10px 0;
-  background: #fff;
-  border-top: 1px solid $--color-border;
-  .site-links {
-    display: flex;
-    justify-content: center;
-    a {
-      line-height: 25px;
-      font-size: 14px;
-    }
-  }
-  .site-data {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-  }
+  height: calc(100% - $--header-height);
+  background: $--color-body;
+  overflow-y: auto;
 }
 
 @media (max-width: 480px) {
@@ -149,4 +112,14 @@ footer {
     display: none !important;
   }
 }
+
+// 动画
+// .contentbox-enter-active {
+//   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+// }
+
+// .contentbox-enter-from {
+//   transform: scale(0.5);
+//   opacity: 0;
+// }
 </style>

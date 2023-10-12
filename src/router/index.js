@@ -5,9 +5,6 @@ import {
 } from 'vue-router'
 import Layout from '@/components/Layout/index.vue'
 
-//在githubpage中 router使用history模式，故打包后放置子路径时，路由base和router要统一
-import config from '../config/index'
-
 export const constantRoutes = [
   {
     path: `/`,
