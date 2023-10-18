@@ -4,4 +4,7 @@ import App from './App.vue'
 import router from './router'
 import './module/tools/index'
 
-createApp(App).use(router).mount('#app')
+import SvgIcon from '@/components/Icons/index.vue'
+import 'virtual:svg-icons-register'
+
+createApp(App).use(router).component('svg-icon', SvgIcon).mount('#app')

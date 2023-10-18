@@ -22,7 +22,15 @@
           v-for="link in tool.collection"
           :key="link.link"
           :href="link.link"
-          ><img :data-src="link.icon" alt="" :src="link.icon" />
+          ><img
+            v-if="!link.isSvg"
+            :data-src="link.icon"
+            class="img"
+            alt=""
+            :src="link.icon"
+          />
+
+          <svg-icon v-else class="img" :name="link.icon"></svg-icon>
           <span class="tool-name">{{ link.name }}</span></a
         >
       </section>
@@ -136,7 +144,7 @@ const toNav = (index) => {
       white-space: normal;
       text-overflow: ellipsis;
       overflow: hidden;
-      img {
+      .img {
         width: 20px;
         height: 20px;
         margin-right: 5px;

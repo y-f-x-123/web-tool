@@ -18,12 +18,12 @@ export default {
       link: 'https://www.handsome-css.com/buttons'
     },
     {
-      icon: '37.png',
+      icon: '37',
       name: 'css动画',
       link: 'http://www.bootstrapmb.com/tag/cssdonghua'
     },
     {
-      icon: '2.png',
+      icon: '2',
       name: 'CSS Tricks',
       link: 'https://qishaoxuan.github.io/css_tricks/'
     },

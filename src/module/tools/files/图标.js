@@ -13,6 +13,11 @@ export default {
       link: 'https://arco.design/iconbox/libs'
     },
     {
+      icon: 'https://icones.netlify.app/favicon.svg',
+      name: 'icones.netlify-图标大全',
+      link: 'https://icones.netlify.app/'
+    },
+    {
       icon: 'https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg',
       name: 'iconPark',
       link: 'https://iconpark.oceanengine.com/official'

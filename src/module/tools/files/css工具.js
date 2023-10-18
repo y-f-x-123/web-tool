@@ -38,7 +38,7 @@ export default {
       link: 'https://box-shadow.art/'
     },
     {
-      icon: '36.png',
+      icon: '36',
       name: '在线clip-path',
       link: 'http://tools.jb51.net/code/css3path'
     },

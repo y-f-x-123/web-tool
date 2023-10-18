@@ -1,5 +1,5 @@
 import { reactive } from 'vue'
-import { getAssetsFile } from '@/utils'
+// import { getAssetsFile } from '@/utils'
 
 //导入tools全部的模块
 const modules = import.meta.glob('./files/*.js')
@@ -29,11 +29,12 @@ for (const path in modules) {
     collection = collection.map((e) => {
       e.icon = e.icon.trim()
       if (!/^http[s?]|(data:)/.test(e.icon)) {
-        if (iconPath) {
-          e.icon = getAssetsFile(`/${iconPath}/${e.icon}`)
-        } else {
-          e.icon = getAssetsFile('/src/assets/icons/' + e.icon)
-        }
+        // if (iconPath) {
+        //   e.icon = getAssetsFile(`/${iconPath}/${e.icon}`)
+        // } else {
+        //   e.icon = getAssetsFile('/src/assets/icons/' + e.icon)
+        // }
+        e.isSvg = true
       }
       return e
     })

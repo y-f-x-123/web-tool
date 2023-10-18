@@ -13,12 +13,12 @@ export default {
       link: 'https://www.toptal.com/developers/css/sprite-generator'
     },
     {
-      icon: '20.png',
+      icon: '20',
       name: '视频转GIF',
       link: 'https://www.tutieshi.com/'
     },
     {
-      icon: '21.png',
+      icon: '21',
       name: '在线SVG制作',
       link: 'https://51tools.info/svg/'
     },
@@ -28,7 +28,7 @@ export default {
       link: 'https://c.runoob.com/more/svgeditor/'
     },
     {
-      icon: '1.png',
+      icon: '1',
       name: '趣作图',
       link: 'https://www.pickwant.com/home'
     },
@@ -43,12 +43,12 @@ export default {
       link: 'https://pixian.ai/'
     },
     {
-      icon: '22.png',
+      icon: '22',
       name: '图片在线编辑',
       link: 'https://www.iloveimg.com/zh-cn'
     },
     {
-      icon: '23.png',
+      icon: '23',
       name: '在线PS',
       link: 'https://www.uupoop.com/#/'
     },
@@ -58,62 +58,62 @@ export default {
       link: 'https://www.photopea.com/'
     },
     {
-      icon: '24.png',
+      icon: '24',
       name: '图片加水印',
       link: 'https://www.onlinedo.cn/img-shuiyin'
     },
     {
-      icon: '25.png',
+      icon: '25',
       name: '图片去水印',
       link: 'https://www.apowersoft.cn/image-watermark-remover'
     },
     {
-      icon: '26.png',
+      icon: '26',
       name: '图片合并切割',
       link: 'http://www.zuohaotu.com/'
     },
     {
-      icon: '27.png',
+      icon: '27',
       name: '生成透明Icon',
       link: 'http://www.ico51.cn/'
     },
     {
-      icon: '28.png',
+      icon: '28',
       name: 'logo设计',
       link: 'https://www.designevo.com/cn/logo-maker/'
     },
     {
-      icon: '29.png',
+      icon: '29',
       name: '搞怪图片生成',
       link: 'https://c.tianhezulin.com/'
     },
     {
-      icon: '30.png',
+      icon: '30',
       name: '表情包',
       link: 'https://www.fabiaoqing.com/'
     },
     {
-      icon: '31.png',
+      icon: '31',
       name: '表情包制作器',
       link: 'https://www.wakatool.com/maker'
     },
     {
-      icon: '32.png',
+      icon: '32',
       name: '朋克图片生成器',
       link: 'https://photomosh.com/'
     },
     {
-      icon: '33.png',
+      icon: '33',
       name: 'Pexels图片素材',
       link: 'https://www.pexels.com/zh-cn/'
     },
     {
-      icon: '34.png',
+      icon: '34',
       name: 'Pixabay图片素材',
       link: 'https://pixabay.com/'
     },
     {
-      icon: '35.png',
+      icon: '35',
       name: 'Pxhere图片素材',
       link: 'https://pxhere.com/'
     },

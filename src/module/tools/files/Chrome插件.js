@@ -3,17 +3,17 @@ export default {
   name: 'Chrome插件',
   collection: [
     {
-      icon: '38.png',
+      icon: '38',
       name: 'OneTab标签管理',
       link: 'https://chrome.google.com/webstore/category/extensions?hl=zh-CN'
     },
     {
-      icon: '39.png',
+      icon: '39',
       name: '前端助手插件',
       link: 'http://www.itmind.net/1470.html'
     },
     {
-      icon: '40.png',
+      icon: '40',
       name: 'Postman网页版',
       link: 'http://www.itmind.net/1334.html'
     },
@@ -28,27 +28,27 @@ export default {
       link: 'https://www.0z.gs/webDevelopment/1736.html'
     },
     {
-      icon: '41.png',
+      icon: '41',
       name: 'GitHub加速插件',
       link: 'http://www.itmind.net/217.html'
     },
     {
-      icon: '42.png',
+      icon: '42',
       name: '视频下载插件',
       link: 'http://www.itmind.net/3092.html'
     },
     {
-      icon: '43.png',
+      icon: '43',
       name: 'Vue.js devtools',
       link: 'http://www.itmind.net/6438.html'
     },
     {
-      icon: '51.png',
+      icon: '51',
       name: '广告拦截器',
       link: 'https://extfans.com/productivity/bgnkhhnnamicmpeenaelnjfhikgbkllg/'
     },
     {
-      icon: '52.png',
+      icon: '52',
       name: '密码管理',
       link: 'https://extfans.com/productivity/hdokiejnpimakedhajhdlcegeplioahd/'
     },

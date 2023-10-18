@@ -8,22 +8,22 @@ export default {
       link: 'https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser'
     },
     {
-      icon: '44.png',
+      icon: '44',
       name: 'Git Graph',
       link: 'https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph'
     },
     {
-      icon: '45.png',
+      icon: '45',
       name: 'GitLens',
       link: 'https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens'
     },
     {
-      icon: '46.png',
+      icon: '46',
       name: 'Git History',
       link: 'https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory'
     },
     {
-      icon: '47.png',
+      icon: '47',
       name: 'Git Blame',
       link: 'https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame'
     },
@@ -48,22 +48,22 @@ export default {
       link: 'https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag'
     },
     {
-      icon: '48.png',
+      icon: '48',
       name: '代码美化',
       link: 'https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify'
     },
     {
-      icon: '49.png',
+      icon: '49',
       name: '代码书签',
       link: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks'
     },
     {
-      icon: '50.png',
+      icon: '50',
       name: 'FileSize',
       link: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks'
     },
     {
-      icon: '55.png',
+      icon: '55',
       name: 'Markdown预览',
       link: 'https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts'
     }

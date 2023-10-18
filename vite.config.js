@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import topLevelAwait from 'vite-plugin-top-level-await'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +14,24 @@ export default defineConfig({
       promiseExportName: '__tla',
       // The function to generate import names of top-level await promise in each chunk module
       promiseImportName: (i) => `__tla_${i}`
+    }),
+    createSvgIconsPlugin({
+      // 指定需要缓存的图标文件夹
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+      // 指定symbolId格式
+      symbolId: 'icon-[dir]-[name]'
+
+      /**
+       * 自定义插入位置
+       * @default: body-last
+       */
+      // inject?: 'body-last' | 'body-first'
+
+      /**
+       * custom dom id
+       * @default: __svg__icons__dom__
+       */
+      // customDomId: '__svg__icons__dom__',
     })
   ],
   css: {

@@ -8,7 +8,7 @@ export default {
       link: 'https://github.com/trending'
     },
     {
-      icon: '56.png',
+      icon: '56',
       name: 'json在线解析',
       link: 'https://www.sojson.com/'
     },
@@ -43,7 +43,7 @@ export default {
       link: 'https://any86.github.io/any-rule/'
     },
     {
-      icon: '16.png',
+      icon: '16',
       name: '文件格式转换',
       link: 'https://convertio.co/zh/'
     },
@@ -53,17 +53,17 @@ export default {
       link: 'https://www.aconvert.com/cn/audio/'
     },
     {
-      icon: '17.png',
+      icon: '17',
       name: '中文简繁体转换',
       link: 'https://tool.lu/zhconvert'
     },
     {
-      icon: '18.png',
+      icon: '18',
       name: '字数统计',
       link: 'https://www.eteste.com/'
     },
     {
-      icon: '19.png',
+      icon: '19',
       name: '时间戳转换',
       link: 'https://www.epochconverter.com/'
     },

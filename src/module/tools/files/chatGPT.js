@@ -8,7 +8,7 @@ export default {
       link: 'https://chat.plexpt.com/'
     },
     {
-      icon: '57.png',
+      icon: '57',
       name: 'AIer',
       link: 'https://ai.aging.run/'
     },
@@ -23,12 +23,12 @@ export default {
       link: 'https://chat.aidutu.cn/'
     },
     {
-      icon: '53.png',
+      icon: '53',
       name: 'AI EDU',
       link: 'https://ai.aigcfun.com/'
     },
     {
-      icon: '54.png',
+      icon: '54',
       name: 'chatbot',
       link: 'https://chatbot.theb.ai/#/chat'
     }
