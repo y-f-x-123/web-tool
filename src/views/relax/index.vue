@@ -2,7 +2,7 @@
   <div class="box">
     <a class="relax-item" target="_blank" href="https://bruno-simon.com/">
       <fish>
-        <img src="@/assets/icons/3.png" alt="" class="fish-eye" />
+        <svg-icon name="3" class="fish-eye"></svg-icon>
         <div class="game-info">
           <div class="game-title">网页开车</div>
           <div class="game-desc">
@@ -13,7 +13,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://fishpi.cn/">
       <fish>
-        <img src="@/assets/icons/4.png" alt="" class="fish-eye" />
+        <svg-icon name="4" class="fish-eye"></svg-icon>
         <div class="game-info">
           <div class="game-title">摸鱼派</div>
           <div class="game-desc">一个以程序员,设计师和极客为核心的社区</div>
@@ -22,7 +22,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://strobe.cool/">
       <fish>
-        <img src="@/assets/icons/5.png" alt="" class="fish-eye" />
+        <svg-icon name="5" class="fish-eye"></svg-icon>
         <div class="game-info">
           <div class="game-title">扭曲世界</div>
           <div class="game-desc">你周围的世界会改变形状，显得扭曲和变形。</div>
@@ -35,7 +35,7 @@
       href="https://adarkroom.doublespeakgames.com/?lang=zh_cn"
     >
       <fish>
-        <img src="@/assets/icons/6.png" alt="" class="fish-eye" />
+        <svg-icon name="6" class="fish-eye"></svg-icon>
         <div class="game-info">
           <div class="game-title">暗室</div>
           <div class="game-desc">适用于浏览器的极简文字冒险游戏</div>
@@ -48,7 +48,7 @@
       href="https://www.webhek.com/post/draw-a-stickman/"
     >
       <fish>
-        <img src="@/assets/icons/7.png" alt="" class="fish-eye" />
+        <svg-icon name="7" class="fish-eye"></svg-icon>
         <div class="game-info">
           <div class="game-title">神笔马良</div>
           <div class="game-desc">小人历险记-创作型游戏</div>
@@ -57,7 +57,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://zoom.earth/">
       <fish>
-        <img src="@/assets/icons/8.png" alt="" class="fish-eye" />
+        <svg-icon name="8" class="fish-eye"></svg-icon>
         <div class="game-info">
           <div class="game-title">地球卫星</div>
           <div class="game-desc">通过地图来检测区域天气、地形</div>
@@ -66,7 +66,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://bellwoods.xyz/">
       <fish>
-        <img src="@/assets/icons/9.png" alt="" class="fish-eye" />
+        <svg-icon name="9" class="fish-eye"></svg-icon>
         <div class="game-info">
           <div class="game-title">在线放风筝</div>
           <div class="game-desc">移动鼠标可以让风筝飞翔，伴随着音乐</div>
@@ -92,7 +92,7 @@
       href="http://www.staggeringbeauty.com/"
     >
       <fish>
-        <img src="@/assets/icons/10.png" alt="" class="fish-eye" />
+        <svg-icon name="10" class="fish-eye"></svg-icon>
         <div class="game-info">
           <div class="game-title">魔性摇摇乐</div>
           <div class="game-desc">魔性解压网站，急速晃动还会闪亮你的眼</div>

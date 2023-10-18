@@ -54,7 +54,7 @@
       </div>
     </a>
     <a class="game-item" target="_blank" href="https://2020game.io/">
-      <img src="@/assets/icons/11.png" alt="" class="game-logo" />
+      <svg-icon name="11" class="game-logo"></svg-icon>
       <div class="game-info">
         <div class="game-title">2000游戏</div>
         <div class="game-desc">重点推荐，闯关类游戏！</div>
@@ -88,14 +88,14 @@
       </div>
     </a>
     <a class="game-item" target="_blank" href="http://www.itmind.net/tetris/">
-      <img src="@/assets/icons/12.png" alt="" class="game-logo" />
+      <svg-icon name="12" class="game-logo"></svg-icon>
       <div class="game-info">
         <div class="game-title">俄罗斯方块</div>
         <div class="game-desc">经典俄罗斯方块网页版</div>
       </div>
     </a>
     <a class="game-item" target="_blank" href="https://lines.frvr.com/">
-      <img src="@/assets/icons/13.png" alt="" class="game-logo" />
+      <svg-icon name="13" class="game-logo"></svg-icon>
       <div class="game-info">
         <div class="game-title">连线游戏</div>
         <div class="game-desc">
@@ -104,7 +104,7 @@
       </div>
     </a>
     <a class="game-item" target="_blank" href="http://www.heyzxz.me/pcol/">
-      <img src="@/assets/icons/14.png" alt="" class="game-logo" />
+      <svg-icon name="14" class="game-logo"></svg-icon>
       <div class="game-info">
         <div class="game-title">沉浸式3D台球</div>
         <div class="game-desc">在线台球游戏，画质很精美</div>
