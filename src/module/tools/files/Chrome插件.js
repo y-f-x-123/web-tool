@@ -38,11 +38,6 @@ export default {
       link: 'http://www.itmind.net/3092.html'
     },
     {
-      icon: '43',
-      name: 'Vue.js devtools',
-      link: 'http://www.itmind.net/6438.html'
-    },
-    {
       icon: '51',
       name: '广告拦截器',
       link: 'https://extfans.com/productivity/bgnkhhnnamicmpeenaelnjfhikgbkllg/'
