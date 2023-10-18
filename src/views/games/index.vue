@@ -77,11 +77,7 @@
       rel="nofollow external"
       href="http://www.bz.bhrgz.cn/"
     >
-      <img
-        src="http://www.bz.bhrgz.cn/images/logo.png"
-        alt=""
-        class="game-logo"
-      />
+      <svg-icon name="西瓜游戏" class="game-logo"></svg-icon>
       <div class="game-info">
         <div class="game-title">西瓜游戏平台</div>
         <div class="game-desc">收集了很多小游戏</div>
