@@ -4,6 +4,7 @@
     <router-link class="navigation-link" to="notes">文档</router-link>
     <router-link class="navigation-link" to="games">游戏</router-link>
     <router-link class="navigation-link" to="relax">摸鱼</router-link>
+    <MyButton style="height: 28px" @click="show = true">其他工具</MyButton>
   </header>
   <main class="content">
     <router-view v-slot="{ Component, route }">
@@ -14,10 +15,17 @@
       </keep-alive>
     </router-view>
   </main>
+  <Notice v-model:show="show">
+    <template #title>其他工具</template>
+  </Notice>
 </template>
 
 <script setup>
 import { reactive, ref } from 'vue'
+import MyButton from '../common/MyButton.vue'
+import Notice from '@/components/Notice/index.vue'
+
+const show = ref(false)
 
 let siteData = reactive({
   site_pv: 0,
