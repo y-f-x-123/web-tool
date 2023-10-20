@@ -19,6 +19,7 @@
                 class="input"
                 name="text"
                 type="text"
+                autocomplete="off"
               />
               <p class="input__description">What are you looking for?</p>
             </div>
@@ -47,6 +48,7 @@
                 name="text"
                 class="input__search"
                 placeholder="Enter keyword password"
+                autocomplete="off"
                 @keyup.enter="handleSearch"
               />
             </div>
