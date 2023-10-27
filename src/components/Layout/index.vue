@@ -15,7 +15,7 @@
       </keep-alive>
     </router-view>
   </main>
-  <Notice v-model:show="show">
+  <Notice v-model:show="show" v-if="show">
     <template #title>其他工具</template>
   </Notice>
 </template>
