@@ -15,6 +15,7 @@ const sort = [
   'Chrome插件',
   'vscode插件',
   'UI框架',
+  '其他工具',
   '更多导航'
 ]
 /**
