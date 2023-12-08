@@ -46,6 +46,11 @@ export default {
       icon: 'https://webdesignclip.com/favicon.ico',
       name: 'WebDesignClip',
       link: 'https://webdesignclip.com/'
+    },
+    {
+      icon: 'https://www.jq22.com/favicon.ico',
+      name: 'jQuery特效动画插件',
+      link: 'https://www.jq22.com/'
     }
   ]
 }
