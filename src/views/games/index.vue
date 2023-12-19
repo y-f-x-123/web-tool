@@ -125,8 +125,10 @@
 </template>
 
 <script setup></script>
-
 <style lang="scss" scoped>
+.box {
+  background: rgba($color: $--color-box, $alpha: 0);
+}
 .game-item {
   width: 224px;
   height: 95px;
@@ -135,7 +137,7 @@
   border: 1px solid #e4ecf3;
   box-shadow: 1px 2px 3px #f2f6f8;
   border-radius: 6px;
-  background: #fff;
+  background: rgba($color: $--color-box, $alpha: 0.6);
   overflow: hidden;
   transition: all 0.3s;
   display: flex;

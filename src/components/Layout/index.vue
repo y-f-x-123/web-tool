@@ -47,7 +47,7 @@ if (localStorage.getItem('ABIN_SITE_DATA')) {
   padding: 0 $--padding-side;
   justify-content: center;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  background-color: $--color-header;
+  background-color: rgba($color: $--color-header, $alpha: 0.5);
 
   .navigation-link {
     position: relative;
@@ -91,7 +91,7 @@ if (localStorage.getItem('ABIN_SITE_DATA')) {
   padding-right: $--padding-side;
   width: 100%;
   height: calc(100% - $--header-height);
-  background: $--color-body;
+  background: rgba($color: $--color-body, $alpha: 0.8);
   overflow-y: auto;
 }
 

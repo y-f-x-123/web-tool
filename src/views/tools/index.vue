@@ -116,7 +116,7 @@ const toNav = (index) => {
     align-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 20px;
-    background-color: $--color-box;
+    background-color: rgba($color: $--color-box, $alpha: 0.6);
     .point {
       position: absolute;
       left: 0;
