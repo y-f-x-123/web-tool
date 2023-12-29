@@ -21,6 +21,11 @@ export default {
       icon: 'https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg',
       name: 'vue2组件滑动验证码',
       link: 'https://github.com/isszz/rotate-captcha'
+    },
+    {
+      icon: 'https://www.jiemadi.com/jiemadi.ico',
+      name: '免费手机号接收验证码',
+      link: 'https://www.jiemadi.com/#google_vgnette'
     }
   ]
 }
