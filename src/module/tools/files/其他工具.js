@@ -26,6 +26,16 @@ export default {
       icon: 'https://www.jiemadi.com/jiemadi.ico',
       name: '免费手机号接收验证码',
       link: 'https://www.jiemadi.com/#google_vgnette'
+    },
+    {
+      icon: 'https://www.bootcdn.cn/assets/ico/favicon.ico?1694658481677',
+      name: '免费CDN加速',
+      link: 'https://www.bootcdn.cn/'
+    },
+    {
+      icon: 'https://www.guerrillamail.com/favicon.ico',
+      name: '一次性免费邮箱',
+      link: 'https://www.guerrillamail.com/'
     }
   ]
 }
